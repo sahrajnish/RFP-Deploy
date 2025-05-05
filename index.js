@@ -10,8 +10,8 @@ import connectDB from "./config/connectDB.js";
 import { DB_NAME } from "./constanst.js";
 
 // Get __dirname in ES module
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
 
 // Load environment variables
 dotenv.config({ path: "./.env" });
@@ -39,10 +39,10 @@ if (fs.existsSync(buildPath)) {
     res.sendFile(path.resolve(buildPath, "index.html"));
   });
 } else {
-  console.warn("⚠️  client/build folder not found. If deploying, ensure you ran `npm run build` in /client.");
+  console.warn("client/build folder not found. If deploying, ensure you ran `npm run build` in /client.");
 }
 
 // Start server
 app.listen(port, () => {
-  console.log(`✅ Server running on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });
