@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js",
-    "client": "npm start --prefix client",
-    "build": "echo \"Skipping build because client is already built\"",
-    "dev": "concurrently \"npm start\" \"npm run client\""
-  },
+  "start": "node index.js",
+  "server": "nodemon index.js",
+  "build": "echo \"Skipping build because client is already built\""
+},
   "author": "",
   "license": "ISC",
   "description": "",
