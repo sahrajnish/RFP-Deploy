@@ -8,13 +8,14 @@ import path, { dirname } from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
 
+dotenv.config({
+    path: "./.env"
+});
+
 // Fix for __dirname in ES module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-dotenv.config({
-    path: "./.env"
-});
 
 const port = process.env.PORT || 9000;
 
