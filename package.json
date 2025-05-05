@@ -6,6 +6,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
+    "build": "echo \"Skipping build because client is already built\"",
     "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "author": "",
