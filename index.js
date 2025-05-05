@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import fs from "fs";
-import path, { dirname } from "path";
+import path from "path";
 import { fileURLToPath } from "url";
 
 import userRouter from "./routes/user.routes.js";
@@ -10,8 +10,8 @@ import connectDB from "./config/connectDB.js";
 import { DB_NAME } from "./constanst.js";
 
 // Get __dirname in ES module
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load environment variables
 dotenv.config({ path: "./.env" });
